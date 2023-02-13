@@ -1,0 +1,71 @@
+.field {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  div[id='email'] {
+    border-radius: 10px 10px 0px 0px;
+  }
+
+  div[id='password'] {
+    border-top: 0;
+    border-radius: 0px 0px 10px 10px;
+  }
+
+  img {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+  }
+}
+
+.input-wrapper {
+  position: relative;
+
+  margin: 0;
+  padding: 0;
+
+  border: 1px solid #dce2e6;
+  border-radius: 10px;
+
+  input:valid + label {
+    transform: translateY(-3.5rem) translateX(1.5rem) scale(0.75, 0.75);
+    opacity: 0.8;
+  }
+}
+
+.input {
+  flex: 1;
+  width: 90%;
+  height: 4.5rem;
+  display: inline-block;
+
+  padding: 1.5rem;
+
+  color: var(--text);
+  background-color: transparent;
+  border: 0;
+
+  transition: padding 0.2s;
+
+  &:valid {
+    padding: 2.125rem 1.5rem 0.875rem;
+  }
+
+  &:focus-visible {
+    outline: none;
+  }
+}
+
+.label {
+  position: absolute;
+  display: block;
+  padding-left: 0.1em;
+  transform: translateY(-2.9rem) translateX(1.5rem);
+  transform-origin: left center;
+  transition: transform 0.2s, opacity 0.2s;
+  pointer-events: none;
+
+  z-index: 5;
+  color: var(--complement);
+}
