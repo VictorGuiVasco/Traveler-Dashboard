@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 import { SignInForm } from '@/components/forms/signIn'
 
-import { barlow, heebo, inter } from '@/utils/fonts'
+import { barlow, heebo } from '@/utils/fonts'
 import styles from './page.module.scss'
 
 import cover from 'public/images/auth-cover.png'
