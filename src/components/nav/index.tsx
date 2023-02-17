@@ -13,10 +13,10 @@ type NavbarProps = {
   pageTitle?: string
   goBack?: boolean
   centerTitle?: string
-  left?: ReactNode
+  right?: ReactNode
 }
 
-function Navbar({ pageTitle, centerTitle, goBack, left }: NavbarProps) {
+function Navbar({ pageTitle, centerTitle, goBack, right }: NavbarProps) {
   const router = useRouter()
 
   return (
@@ -40,7 +40,7 @@ function Navbar({ pageTitle, centerTitle, goBack, left }: NavbarProps) {
           {centerTitle && <p className={barlow.className}>{centerTitle}</p>}
         </div>
 
-        <div className={styles.right}>{left}</div>
+        <div className={styles.right}>{right}</div>
       </div>
     </nav>
   )
