@@ -3,6 +3,8 @@
   display: flex;
   flex-direction: column;
 
+  background-color: var(--white);
+
   div[id='email'] {
     border-radius: 10px 10px 0px 0px;
   }
