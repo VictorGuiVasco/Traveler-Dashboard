@@ -1,10 +1,15 @@
-import { Input } from '@/components/inputs/sign-input'
-import { heebo } from '@/utils/fonts'
+import { useState } from 'react'
 import { Form } from '@unform/web'
 
+import { Checkbox } from '@/components/inputs/chekbox'
+import { Input } from '@/components/inputs/sign-input'
+
+import { heebo } from '@/utils/fonts'
 import styles from './styles.module.scss'
 
 export function SignInForm() {
+  const [keepConnected, setKeepConnected] = useState(false)
+
   function handleFormSubmit() {}
 
   return (
@@ -13,7 +18,13 @@ export function SignInForm() {
       <Input name="password" type="password" placeholder="Senha" required />
 
       <div className={styles['checkbox-container']}>
-        <input name="stay_connected" type="checkbox" />
+        <Checkbox
+          name="keepConnected"
+          label="Lembrar-me"
+          value="value"
+          checked={keepConnected}
+          onChange={() => setKeepConnected(!keepConnected)}
+        />
         <p className={heebo.className}>Esqueci minha senha</p>
       </div>
 

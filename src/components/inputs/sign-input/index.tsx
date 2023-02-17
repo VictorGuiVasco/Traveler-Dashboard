@@ -15,8 +15,7 @@ type InputProps = React.InputHTMLAttributes<HTMLInputElement> & {
 
 export function Input({ name, placeholder, ...rest }: InputProps) {
   const inputRef = useRef<HTMLInputElement>(null)
-  const { fieldName, defaultValue, error, clearError, registerField } =
-    useField(name)
+  const { fieldName, defaultValue, clearError, registerField } = useField(name)
 
   const [isEyeVisible, setIsEyeVisible] = useState(true)
 
