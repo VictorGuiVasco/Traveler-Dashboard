@@ -21,27 +21,25 @@ function Navbar({ pageTitle, centerTitle, goBack, right }: NavbarProps) {
 
   return (
     <nav className={styles.nav}>
-      <div className={styles.container}>
-        <div className={styles.left}>
-          {goBack && (
-            <Image
-              src={arrow_left.src}
-              alt="Voltar"
-              width="24"
-              height="24"
-              onClick={router.back}
-            />
-          )}
+      <div className={styles.left}>
+        {goBack && (
+          <Image
+            src={arrow_left.src}
+            alt="Voltar"
+            width="24"
+            height="24"
+            onClick={router.back}
+          />
+        )}
 
-          {pageTitle && <h1 className={barlow.className}>{pageTitle}</h1>}
-        </div>
-
-        <div className={styles.center}>
-          {centerTitle && <p className={barlow.className}>{centerTitle}</p>}
-        </div>
-
-        <div className={styles.right}>{right}</div>
+        {pageTitle && <h1 className={barlow.className}>{pageTitle}</h1>}
       </div>
+
+      <div className={styles.center}>
+        {centerTitle && <p className={barlow.className}>{centerTitle}</p>}
+      </div>
+
+      <div className={styles.right}>{right}</div>
     </nav>
   )
 }
