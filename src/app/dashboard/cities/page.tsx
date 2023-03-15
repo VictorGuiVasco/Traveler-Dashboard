@@ -1,5 +1,8 @@
 import { Navbar } from '@/components/nav'
 import { Button } from '@/components/button'
+import { CitiesCard } from '@/components/cards/cities'
+
+import { cities } from '@/utils/cities'
 
 import styles from './styles.module.scss'
 
@@ -13,45 +16,14 @@ export default function Cities() {
 
       <main className={styles.main}>
         <div className={styles['card-list']}>
-          <div>
-            <p>Cities</p>
-          </div>
-          <div>
-            <p>Cities</p>
-          </div>
-          <div>
-            <p>Cities</p>
-          </div>
-          <div>
-            <p>Cities</p>
-          </div>
-          <div>
-            <p>Cities</p>
-          </div>
-          <div>
-            <p>Cities</p>
-          </div>
-          <div>
-            <p>Cities</p>
-          </div>
-          <div>
-            <p>Cities</p>
-          </div>
-          <div>
-            <p>Cities</p>
-          </div>
-          <div>
-            <p>Cities</p>
-          </div>
-          <div>
-            <p>Cities</p>
-          </div>
-          <div>
-            <p>Cities</p>
-          </div>
-          <div>
-            <p>Cities</p>
-          </div>
+          {cities.map((city) => (
+            <CitiesCard
+              key={city.id}
+              city={city.city}
+              imageUrl={city.imageUrl}
+              locals_amount={city.locals_amount}
+            />
+          ))}
         </div>
       </main>
     </>

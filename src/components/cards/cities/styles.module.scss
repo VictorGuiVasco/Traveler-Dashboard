@@ -1,0 +1,64 @@
+.card {
+  position: relative;
+
+  width: 16rem;
+  height: 16.625rem;
+  border-radius: 1rem;
+  border: 1px solid #dce2e6;
+
+  background-color: var(--white);
+
+  & > img {
+    width: 15.875rem;
+    height: 10rem;
+
+    border-radius: 1rem;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    object-fit: cover;
+  }
+
+  h1 {
+    font-weight: 600;
+    font-size: 1.25rem;
+    line-height: 1.875rem;
+    color: var(--title);
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+  }
+
+  p {
+    font-size: 1rem;
+    line-height: 1.75rem;
+    color: var(--text);
+  }
+}
+
+.info {
+  padding-top: 1.25rem;
+  padding-left: 1.5rem;
+  padding-right: 1rem;
+}
+
+.buttons {
+  margin: 0;
+  position: absolute;
+
+  display: flex;
+  gap: 0.4rem;
+
+  top: 0.9375rem;
+  right: 0.9375rem;
+
+  button {
+    border-radius: 10px 0px 0px 10px;
+  }
+
+  & button + button {
+    border-radius: 0px 10px 10px 0px;
+  }
+}
