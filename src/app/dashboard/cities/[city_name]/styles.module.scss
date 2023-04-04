@@ -1,0 +1,14 @@
+.nav-icon {
+  display: flex;
+  gap: 0.2rem;
+
+  button {
+    height: 3rem;
+    width: 3rem;
+    border-radius: 10px 0px 0px 10px;
+  }
+
+  & button + button {
+    border-radius: 0px 10px 10px 0px;
+  }
+}

@@ -1,13 +1,15 @@
 'use client'
 
+import { ReactNode } from 'react'
 import Image from 'next/image'
 import { useRouter } from 'next/navigation'
+
+import { IconButton } from '../icon-button'
 
 import { barlow, heebo, inter } from '@/utils/fonts'
 import styles from './styles.module.scss'
 
 import arrow_left from 'public/icons/arrow_left.svg'
-import { ReactNode } from 'react'
 
 type NavbarProps = {
   pageTitle?: string
@@ -22,15 +24,7 @@ function Navbar({ pageTitle, centerTitle, goBack, right }: NavbarProps) {
   return (
     <nav className={styles.nav}>
       <div className={styles.left}>
-        {goBack && (
-          <Image
-            src={arrow_left.src}
-            alt="Voltar"
-            width="24"
-            height="24"
-            onClick={router.back}
-          />
-        )}
+        {goBack && <IconButton icon={arrow_left.src} onClick={router.back} />}
 
         {pageTitle && <h1 className={barlow.className}>{pageTitle}</h1>}
       </div>

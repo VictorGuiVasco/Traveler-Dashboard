@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Form } from '@unform/web'
+import { useRouter } from 'next/navigation'
 
 import { Checkbox } from '@/components/inputs/chekbox'
 import { Input } from '@/components/inputs/sign-input'
@@ -8,9 +9,12 @@ import { heebo } from '@/utils/fonts'
 import styles from './styles.module.scss'
 
 export function SignInForm() {
+  const { push } = useRouter()
   const [keepConnected, setKeepConnected] = useState(false)
 
-  function handleFormSubmit() {}
+  function handleFormSubmit() {
+    push('/dashboard/cities')
+  }
 
   return (
     <Form className={styles.form} onSubmit={handleFormSubmit}>
